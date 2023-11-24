@@ -15,6 +15,7 @@ import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.core.utilities.results.SuccessDataResult;
 import kodlamaio.northwind.core.utilities.results.SuccessResult;
+import kodlamaio.northwind.entities.Dtos.ProductWithCategoryDto;
 import kodlamaio.northwind.entities.concrete.Product;
 import lombok.experimental.var;
 
@@ -75,5 +76,9 @@ public class ProductController {
 
 	public DataResult<List<Product>> getPageSizeAndNo(int pageNo, int PageSize) {
 		return productService.getPageSizeAndNo(pageNo, PageSize);
+	}
+	@GetMapping("/getProductWithCategoryDetails")
+	public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails(){
+		return productService.getProductWithCategoryDetails();
 	}
 }

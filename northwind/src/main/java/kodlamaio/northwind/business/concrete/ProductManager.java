@@ -14,6 +14,7 @@ import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.core.utilities.results.SuccessDataResult;
 import kodlamaio.northwind.core.utilities.results.SuccessResult;
 import kodlamaio.northwind.dataAccess.abstracts.ProductDao;
+import kodlamaio.northwind.entities.Dtos.ProductWithCategoryDto;
 import kodlamaio.northwind.entities.concrete.Product;
 import lombok.experimental.var;
 
@@ -93,6 +94,13 @@ public class ProductManager implements ProductService {
 	public DataResult<List<Product>> getPageSizeAndNo(int pageNo, int PageSize) {
 		Pageable pageable=PageRequest.of(--pageNo, PageSize);
 		return new SuccessDataResult<List<Product>>(productDao.findAll(pageable).getContent());
+	
+	}
+
+	@Override
+	public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails() {
+		// TODO Auto-generated method stub
+		 return new SuccessDataResult<List<ProductWithCategoryDto>>(productDao.getProductWithCategoryDetails(),"başarıyla listelendi");
 	}
 
 }
