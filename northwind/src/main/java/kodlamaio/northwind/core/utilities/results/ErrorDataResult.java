@@ -1,5 +1,7 @@
 package kodlamaio.northwind.core.utilities.results;
 
+import java.util.Map;
+
 public class ErrorDataResult<T> extends DataResult<T> {
 
 	public ErrorDataResult(T data, boolean success, String message) {
@@ -16,5 +18,7 @@ public class ErrorDataResult<T> extends DataResult<T> {
 
 		super(null, false);
 	}
+
+	
 
 }
