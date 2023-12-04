@@ -33,13 +33,25 @@ public class ProductManager implements ProductService {
 		return new SuccessDataResult<List<Product>>(productDao.findAll(), 
 				"Başarıyla listelendi-bu mesaj PM dan gelir");
 	}
-
+//test amaçlı oluşturul
+	
+	public List<Product> getAlltest() {
+		
+		return productDao.findAll();
+	}
 	@Override
 	public Result add(Product product) {
 		productDao.save(product);
 		return new SuccessResult("ürün eklendi-bu mesaj PM dan gelir");
 
 	}
+	//test amaçlı oluşturuldu
+	public void addtest(Product p) {
+		productDao.save(p);
+	}
+	
+	
+	
 
 	@Override
 	public Result delete(Product product) {
@@ -50,8 +62,10 @@ public class ProductManager implements ProductService {
 	@Override
 	public DataResult<Product> getByProductNameAndCategory_CategoryId(String productName, int categoryId) {
 
-		return new SuccessDataResult<Product>(
-				productDao.getByProductNameAndCategory_CategoryId(productName, categoryId));
+		return new SuccessDataResult<Product>(productDao.getByProductNameAndCategory_CategoryId(productName, categoryId),"başarılı");
+
+		
+		
 	}
 
 	@Override

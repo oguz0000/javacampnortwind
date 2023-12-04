@@ -9,6 +9,10 @@ import kodlamaio.northwind.entities.concrete.Product;
 
 public interface ProductService {
 	Result add(Product product);
+	
+	//test amaçlı hazırlandı
+	 void addtest(Product product);
+	 List<Product> getAlltest();
 
 	Result delete(Product product);
 

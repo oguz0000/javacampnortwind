@@ -1,8 +1,8 @@
 package kodlamaio.northwind.core.utilities.results;
 
-public class Result {
-	private boolean success;
-	private String message;
+public abstract class Result {
+	protected boolean success;
+	protected String message;
 
 	public Result(boolean success) {
 		super();
@@ -13,10 +13,7 @@ public class Result {
 		this(success);
 		this.message = message;
 	}
-	public boolean isSuccess() {
-		return success;
-	}
-	public String getMessage() {
-		return message;
-	}
+	public abstract boolean isSuccess() ;
+	
+	public abstract String getMessage() ;
 }

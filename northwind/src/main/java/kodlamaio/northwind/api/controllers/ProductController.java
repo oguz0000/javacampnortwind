@@ -41,7 +41,25 @@ public class ProductController {
 		return productService.add(product);
 
 	}
-
+	//test amaçlı oluşturuldu
+	@PostMapping("/addtest")
+	public void addtest(@RequestBody Product product) {
+		
+		productService.addtest(product);		
+	}
+	//test amaçlı oluşturuldu
+	@GetMapping("/getalltest")
+	public List<Product> getalltest(){
+		return productService.getAlltest();
+	}
+	//test amaçlı oluşturuldu
+		@GetMapping("/getintlisttest")
+		public int intlisttest(){
+			
+			return 5;
+		}
+	
+	
 	@PostMapping("/delete")
 	public Result delete(@RequestBody Product product) {
 		return productService.delete(product);

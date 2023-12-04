@@ -12,4 +12,16 @@ public class ErrorResult extends Result {
 
 	}
 
+	@Override
+	public boolean isSuccess() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getMessage() {
+		// TODO Auto-generated method stub
+		return message;
+	}
+
 }

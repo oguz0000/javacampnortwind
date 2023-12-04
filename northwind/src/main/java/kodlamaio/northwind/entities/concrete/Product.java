@@ -32,7 +32,7 @@ public class Product {
 	private double unitPrice;
 
 	@Column(name = "units_in_stock")
-	private short unitsInStock;
+	private int unitsInStock;
 
 	@Column(name = "quantity_per_unit")
 	private String quantityPerUnit;

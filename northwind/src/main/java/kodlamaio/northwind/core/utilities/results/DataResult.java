@@ -1,8 +1,8 @@
 package kodlamaio.northwind.core.utilities.results;
 
-public class DataResult<T> extends Result {
+public abstract class DataResult<T> extends Result {
 
-	private T data;
+	protected T data;
 
 	public DataResult(T data, boolean success, String message) {
 		super(success, message);
@@ -14,9 +14,7 @@ public class DataResult<T> extends Result {
 		this.data = data;
 	}
 
-	public T getData() {
-		return this.data;
-
-	}
+	public abstract T getData() ;
+	
 
 }

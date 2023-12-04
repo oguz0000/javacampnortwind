@@ -1,6 +1,6 @@
 package kodlamaio.northwind.core.utilities.results;
 
-import java.util.Map;
+
 
 public class ErrorDataResult<T> extends DataResult<T> {
 
@@ -17,6 +17,24 @@ public class ErrorDataResult<T> extends DataResult<T> {
 	public ErrorDataResult() {
 
 		super(null, false);
+	}
+
+	@Override
+	public T getData() {
+		// TODO Auto-generated method stub
+		return data;
+	}
+
+	@Override
+	public boolean isSuccess() {
+		// TODO Auto-generated method stub
+		return success;
+	}
+
+	@Override
+	public String getMessage() {
+		// TODO Auto-generated method stub
+		return message;
 	}
 
 	
