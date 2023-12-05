@@ -10,11 +10,12 @@ public class ProductDaoInMemory implements IProductDaoInMemory {
 	 List<ProductInMemory> products= new ArrayList<ProductInMemory>();
 	
 
-	public ProductDaoInMemory(ProductInMemory daoInMemory) {
+	public ProductDaoInMemory() {
 		super();
 		
 //		products.add(daoInMemory);
 //		products.add(new Product(0, "buzdolabı", 0, 0, "10", null));
+		
 
 	}
 
