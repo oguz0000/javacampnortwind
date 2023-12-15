@@ -9,8 +9,8 @@
 		<version>2.7.16</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>kodlamaio</groupId>
-	<artifactId>northwind</artifactId>
+	<groupId>hacettepe</groupId>
+	<artifactId>bilisim</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>northwind</name>
 	<description>Demo project for Spring Boot</description>
@@ -38,6 +38,7 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+	
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
